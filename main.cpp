@@ -13,20 +13,21 @@ int main()
     int t1=0;
     int numbers = 2010; // розмір масиву для збереження данних
     double w, ao, bk, ak, sm, aoo = 0, akk = 0, bkk = 0, smt, k, tt = 0.0, smtt = 0.0;
-    double h = 0.0005, T = 1e-3;
+    double T = 1e-3; // період
+    double h = T/N; // дорівнює період поділити на 2000
     double t = 0, s;
     double h2;
     double PI = 3.1415926535897932384626433832795; // число пі
     double a[numbers]; // зберігаються всі значення змінної s (по осі У)
     double b[numbers]; // зберігаються всі значення змінної t (по осі Х)
 
-    FILE*ffur;
+    FILE*ffur; // оголошуємо змінні файлу
     FILE*ffurr;
-    ffur  = fopen("furieLine.txt","wt");
+    ffur  = fopen("furieLine.txt","wt"); // створюємо файли
     ffurr = fopen("furieLine2.txt","wt");
 
 //    for (t=0, t1 = 0;t<=0.001;t+=0.001/N, t1++)
-    while(t <= 0.001)
+    while(t <= 0.001) // цикл який робить табуляцію нашого сигналу
     {
         if (t<=0.00025)
         {
