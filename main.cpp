@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    int N=200, i, t1=0, numbers = 1000;
+    int N=2000, i, t1=0, numbers = 20000;
     double w, ao, bk, ak, sm, aoo = 0, akk = 0, bkk = 0, smt, k, tt = 0.0, smtt = 0.0;
     double h = 0.005, T = 1e-3;
     double t = 0, s;
@@ -68,7 +68,7 @@ int main()
 
 
     w = (2*PI)/T;
-    for (tt = 0.00; tt <= 0.201; tt+=0.005)
+    for (tt = 0.00; tt <= 0.001; tt+=0.001/N)
     {
         for (k = 1; k <= 10; k++)
         {
@@ -87,9 +87,9 @@ int main()
             bkk = 0.0;
         }
         smtt+= aoo/2;
-        printf("%.4f\t", tt);
+        printf("%.10f\t", tt);
         fprintf(ffurr,"%f\t", tt);
-        printf("%.4f\n", smtt);
+        printf("%.10f\n", smtt);
         fprintf(ffurr,"%f\n", smtt);
 
         smtt = 0;
