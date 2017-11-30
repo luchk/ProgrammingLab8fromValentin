@@ -95,6 +95,9 @@ int main()
     cout << "PI " << PI << endl;
 //    cout << "PI " << setprecision(10) << PI * 1035*1035 << endl;
 //    cout << "PI " << setprecision(10) << 3.14159 * 1035*1035 << endl;
+//    cout << "PI " << setprecision(10) << PI * 1035*1035 << endl;
+//    cout << "PI " << setprecision(10) << 3.14159 * 1035*1035 << endl;
+
     cout << setprecision(100) << w << endl;
 
     return 0;
