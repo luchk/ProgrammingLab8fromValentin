@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
 #include <iostream>
 #include <iomanip>
@@ -12,7 +11,7 @@ int main()
     int N=2000; // кількість поділок еа які поділений мій графік
     int t1=0; // рахує кількість ітераційциклу табулювання
     int numbers = 2010; // розмір масиву для збереження данних
-    double bk, ak, akk = 0, bkk = 0, smt, k, tt = 0.0, smtt = 0.0;
+    double akk = 0, bkk = 0, k, tt, smtt = 0.0;
     double aoo = 0; // коефіциіент а0 (а нульове)
     double T = 1e-3; // період
     double h = T/N; // дорівнює період поділити на 2000
