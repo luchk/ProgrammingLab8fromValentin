@@ -67,7 +67,7 @@ int main()
     {
         aoo = aoo+a[i];
     }
-    aoo = aoo*h2;
+    aoo = multiplex(aoo, h2);
    // printf("%.4f\n", aoo);
 
 
@@ -77,8 +77,8 @@ int main()
         {
             for (int i = 0; i < t1; i++)
             {
-                akk += a[i] * cos(k * w * b[i]);
-                bkk += a[i] * sin(k * w * b[i]);
+                akk += akate(a, k, b, i);
+                bkk += bkate(a, k, b, i);
             }
             akk = multiplex(akk, h2);
             bkk = multiplex(bkk, h2);
