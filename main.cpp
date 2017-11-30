@@ -90,15 +90,11 @@ int main()
         fprintf(ffurr,"%f\n", smtt);
 
     }
-    cout << "t " << t << endl;
-    cout << "t1 " << t1 << endl;
-    cout << "PI " << PI << endl;
-//    cout << "PI " << setprecision(10) << PI * 1035*1035 << endl;
-//    cout << "PI " << setprecision(10) << 3.14159 * 1035*1035 << endl;
-//    cout << "PI " << setprecision(10) << PI * 1035*1035 << endl;
-//    cout << "PI " << setprecision(10) << 3.14159 * 1035*1035 << endl;
 
-    cout << setprecision(100) << w << endl;
+
+
+
+//    cout << setprecision(100) << w << endl;
 
     return 0;
 }
