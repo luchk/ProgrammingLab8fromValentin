@@ -3,20 +3,19 @@
 #include <math.h>
 #include <iostream>
 #include <iomanip>
-#include <time.h>
 
 using namespace std;
 
 int main()
 {
     int N=2000; // кількість поділок еа які поділений мій графік
-    int t1=0;
+    int t1=0; // рахує кількість ітераційциклу табулювання
     int numbers = 2010; // розмір масиву для збереження данних
     double w, ao, bk, ak, sm, aoo = 0, akk = 0, bkk = 0, smt, k, tt = 0.0, smtt = 0.0;
     double T = 1e-3; // період
     double h = T/N; // дорівнює період поділити на 2000
     double t = 0, s;
-    double h2;
+    double h2 = 2*h/T; // частинка формули
     double PI = 3.1415926535897932384626433832795; // число пі
     double a[numbers]; // зберігаються всі значення змінної s (по осі У)
     double b[numbers]; // зберігаються всі значення змінної t (по осі Х)
@@ -59,7 +58,6 @@ int main()
 
    // t = 0;
     fclose(ffur);
-    h2 = 2*h/T;
     for (int i = 0; i < numbers; i++)
     {
         ao = a[i];
