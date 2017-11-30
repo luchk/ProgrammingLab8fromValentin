@@ -3,5 +3,5 @@ project(ProgrammingLab8fromValentin)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp fourierSeries.h)
 add_executable(ProgrammingLab8fromValentin ${SOURCE_FILES})
