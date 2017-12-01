@@ -11,7 +11,9 @@ int main()
     int N=2000; // кількість поділок еа які поділений мій графік
     int t1=0; // рахує кількість ітераційциклу табулювання
     int numbers = 2010; // розмір масиву для збереження данних
-    double akk = 0, bkk = 0, k, tt, smtt = 0.0;
+    double akk = 0; // коефіціен а кате
+    double bkk = 0; // коефіціент б кате
+    double k, tt, smtt = 0.0;
     double aoo = 0; // коефіциіент а0 (а нульове)
     double T = 1e-3; // період
     double h = T/N; // дорівнює період поділити на 2000
@@ -60,14 +62,16 @@ int main()
         t1++;
     }
 
-   // t = 0;
+
+    // t = 0;
     fclose(ffur);
     for (int i = 0; i < numbers; i++)
     {
         aoo = aoo+a[i];
     }
     aoo = multiplex(aoo, h2);
-   // printf("%.4f\n", aoo);
+    // printf("%.4f\n", aoo);
+
 
 
     for (tt = 0.00; tt <= 0.001; tt+=0.001/N)
@@ -76,25 +80,26 @@ int main()
         {
             for (int i = 0; i < t1; i++)
             {
-                akk += akate(a, k, b, i);
-                bkk += bkate(a, k, b, i);
+                akk += a[i] * cos(k * w * b[i]);
+                bkk += a[i] * sin(k * w * b[i]);
             }
             akk = multiplex(akk, h2);
             bkk = multiplex(bkk, h2);
             smtt += sumOffurier(akk, k, tt, bkk);
+            akk = 0.0;
+            bkk = 0.0;
         }
-        smtt += aoo / 2;
+        smtt+= aoo/2;
 //        printf("%.10f\t", tt);
         fprintf(ffurr,"%f\t", tt);
 //        printf("%.10f\n", smtt);
         fprintf(ffurr,"%f\n", smtt);
 
+        smtt = 0;
     }
-
-
-
-
-//    cout << setprecision(100) << w << endl;
+//    cout << "t "  << t << endl;
+//    cout << "t1 " << t1 << endl;
+//    cout << "PI " << PI << endl;
 
     return 0;
 }
